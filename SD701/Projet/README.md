@@ -1,10 +1,10 @@
 # SD701 : Recommandation d'articles
 
-Le fichier principal en jupyter notebook est: Projet_SD701_SoniaBouden.ipynb
+Le fichier principal en jupyter notebook est: ---------> Projet_SD701_SoniaBouden.ipynb
 
-Il est disponible en version html et pdf
+Il est disponible en version html et pdf dans le dossier zippé: Projet.zip
 
-Le dataset utilisé pour les commentaires sont: CommentsApril2018.csv
+Le dataset utilisé pour les commentaires est: CommentsApril2018.csv
 D'autres datasets sont disponibles dans le dossier nyt-comments et sont téléchargeables à partir du site: https://www.kaggle.com/aashita/nyt-comments
 
 Les autres datasets utilisés sont : 
