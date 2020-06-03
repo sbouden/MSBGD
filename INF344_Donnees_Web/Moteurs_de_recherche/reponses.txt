@@ -1,0 +1,47 @@
+1) Première phase : crawling du site
+Question : Combien il y a de pages indexées ? 
+SELECT count(URL) from webpages;
+6424
+
+Par contre, il y a 6 URL sans contenu
+SELECT count(content) from webpages WHERE content='';
+6
+
+
+Question : Combien de pages ont la même URL requêtée et répondue ?
+SELECT count(*) from responses WHERE queryURL==respURL;
+3197
+
+Question : Certaines pages comme https://wiki.jachiet.com/wikipedia_fr_mathematics_nopic_2020-04/A/Surface_de_Delaunay ne sont pas indexées, pourquoi ? Pouvez-vous en trouver d’autres ?
+Il y a 7078 articles dont seulement 6424 qui sont indexés.
+
+2) Deuxième phase : précalcul de TF et IDF
+('https://wiki.jachiet.com/wikipedia_fr_mathematics_nopic_2020-04/A/Matrice_diagonalisable', 0.16519174041297935)
+('matric', 2.0670651460787868)
+
+
+3) Troisième phase : Calcul du PageRank
+J'ai effectué les premières fonctions mais j'ai une erreur que je ne comprends pas dans ma fonction calcul_graphe
+  File "pagerank.py", line 57, in calcul_graphe 
+    nouveau_score[page] += score[P] * (1-ALPHA) / nb_liens_sur_P
+KeyError: 'https://wiki.jachiet.com/wikipedia_fr_mathematics_nopic_2020-04/A/index'
+
+4)  
+4.1 Avec simplement tf-idf:
+Tapez une phrase: comment multiplier une matrice
+['comment', 'multiplier', 'un', 'matric']
+<class 'list'>
+('https://wiki.jachiet.com/wikipedia_fr_mathematics_nopic_2020-04/A/Matrice_diagonalisable', 0.3435463781990231)
+('https://wiki.jachiet.com/wikipedia_fr_mathematics_nopic_2020-04/A/Matrice_de_permutation', 0.34211359316021017)
+("https://wiki.jachiet.com/wikipedia_fr_mathematics_nopic_2020-04/A/Matrice_d'incidence", 0.3074213920605892)
+('https://wiki.jachiet.com/wikipedia_fr_mathematics_nopic_2020-04/A/Matrice_(math%C3%A9matiques)', 0.2794306556696804)
+('https://wiki.jachiet.com/wikipedia_fr_mathematics_nopic_2020-04/A/Matrice_orthogonale', 0.2699389150404312)
+('https://wiki.jachiet.com/wikipedia_fr_mathematics_nopic_2020-04/A/Matrice_diagonale', 0.26632597262838853)
+('https://wiki.jachiet.com/wikipedia_fr_mathematics_nopic_2020-04/A/Matrice_%C3%A9l%C3%A9mentaire', 0.2660962726904996)
+('https://wiki.jachiet.com/wikipedia_fr_mathematics_nopic_2020-04/A/Matrice_de_Hessenberg', 0.26094764523818503)
+("https://wiki.jachiet.com/wikipedia_fr_mathematics_nopic_2020-04/A/Logarithme_d'une_matrice", 0.24453086527588744)
+('https://wiki.jachiet.com/wikipedia_fr_mathematics_nopic_2020-04/A/Matrice_inversible', 0.2380980150291647)
+
+4.2 Avec tf-idf et PageRank
+N'ayant pas réussi PageRank je n'ai pas pu tester ma fonction mais je pense avoir compris le principe.
+
