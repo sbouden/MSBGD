@@ -1,0 +1,15 @@
+....E..
+======================================================================
+ERROR: testQ3content2 (__main__.MyTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "./tests.py", line 49, in testQ3content2
+    self.assertTrue(self.containsThatContains(links, link))
+  File "./tests.py", line 18, in containsThatContains
+    if s.lower() in a.lower():
+AttributeError: 'list' object has no attribute 'lower'
+
+----------------------------------------------------------------------
+Ran 7 tests in 11.836s
+
+FAILED (errors=1)

@@ -1,0 +1,98 @@
+body {
+	text-align: center;
+}
+
+a { 
+	text-decoration: none; 
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+img { 
+	width: 200px;
+	margin: 30px;
+}
+
+.erreur {
+	color: red;
+}
+
+.philo {
+	color: blue;
+}
+
+.philo2 {
+	color: #CEF0D4;
+}
+
+.lien {
+	color: #d54d7b;
+}
+
+.lost {
+	color: red;
+}
+
+.won {
+	color: green;
+}
+
+h1 {
+	color: #d54d7b; 
+	font-weight: normal; 
+	font-family: Garamond;
+	font-style: italic; 
+	font-size: 32px; 
+	line-height: 32px; 
+	margin-bottom: 30px;
+	margin-top: 30px; 
+	text-shadow: 0 1px 1px #fff; 
+}
+
+input [type="text"] {
+    border: none;
+    padding: 10px;
+    margin: 10px;
+    height: 50px;
+    width: 500px;
+    border:1px solid #eaeaea;
+    outline:none;
+}
+
+input:hover {
+    border-color: #b9b9b9;
+}
+
+input:focus {
+    border-color:#4d90fe;
+}
+
+input[type="submit"] {
+    border-radius: 4px;
+    background: #f2f2f2;
+    font-size: 14px;
+    cursor: default;
+    font-weight: bold;
+    border: 1px solid #7c795d;
+    color: #777;
+    width: 70px;
+    padding: 0 10px;
+    height:30px;
+}
+
+input[type="submit"]:hover {
+	box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    background: #f5e5f8;
+    border: 1px solid #c4c2c6;
+    color: #444;
+}
+
+
+.list {
+	width : 250px;
+	text-align : left;
+	margin-left : auto;
+	margin-right : auto;
+}

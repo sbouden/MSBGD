@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta charset="utf-8">    
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/style.css">
+
+        <title>Tous les chemins mènent à la philosophie</title>
+
+  </head>
+ 
+  <body>
+
+
+  	<a href="/">
+  	  <h1>Tous les chemins mènent à la philosophie</h1>
+      <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/1024px-Wikipedia-logo-v2.svg.png" >
+    </a>
+
+    {% block body %}
+      {# Début du bloc "body", dont vous devez modifier le contenu #}
+      <p> {{message}} </p>
+       
+
+      <p>Avec quel mot souhaitez-vous commencer la partie?</p>
+
+      <form action="/new-game" method="post">
+      	<input type="text" name="start" placeholder="Tapez votre mot initial!">
+
+        <input type="submit" name="submit" value="submit"> 
+
+      </form>
+      <br>
+      {# Fin du bloc "body" #}
+    {% endblock %}
+    <br>
+    <br>
+
+     {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        
+        {% for category, message in messages %}
+
+          <div class="{{category}}">
+          {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+  </body>
+</html>
