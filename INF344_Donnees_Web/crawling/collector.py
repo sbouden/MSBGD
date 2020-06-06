@@ -26,7 +26,7 @@ class Collecte:
         """
         # DO NOT MODIFY
         self.basename = "collecte.step"
-        self.name = "sbouden"
+        self.name = "*"
 
     def collectes(self):
         """collectes
